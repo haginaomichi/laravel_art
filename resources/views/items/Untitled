@@ -1,0 +1,32 @@
+<a href = "{{ route('items.finish', $item) }}"><input type="submit" value="内容を確認し、購入する"></a>
+
+public function isOrderedBy($id){
+      $ordered_items = Item::count($id);
+      // $result = $ordered_users_ids->contains($user->id);
+      // return $result;
+    }
+    
+<form method="post" class="order" action="{{ route('items.confirm', $item) }}">
+        @csrf
+        @method('patch')
+        <a class="order_button"><button>購入</button></a>
+      </form>
+      
+<div>
+    @if($ordered_items === 0)
+      <form method="post" class="order" action="{{ route('items.finish', $item) }}">
+        @csrf
+        @method('patch')
+        <a class="order_button"><button>購入</button></a>
+      </form>
+    @else
+      <p>売り切れ</p>
+    @endif
+  </div>
+  
+  public function orderItems(){
+      return $this->belongsToMany('App\Item', 'orders');
+    }
+    public function orders(){
+      return $this->hasOne('App\Order');
+    }

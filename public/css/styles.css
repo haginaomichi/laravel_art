@@ -1,0 +1,170 @@
+.container {
+  width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #F8F8F8;
+}
+
+/* ヘッダーメニュー整理 */
+.header_nav {
+  display: flex;
+  list-style: none;
+  background-color: white;
+  border-bottom: solid 3px #BDBDB7;
+  padding-left: 0;
+  padding: 30px 0px;
+}
+.header_nav li {
+  margin-right: 30px;
+  list-style: none;
+}
+.header_nav li ul{
+    display: none;
+    padding: 0px;
+}
+.header_nav li:hover ul{
+    display: block;
+}
+
+/*フッターメニュー整理*/
+.footer_nav {
+  list-style-type: none;
+  background-color: white;
+  padding: 10px;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+.footer_nav li {
+  display: inline-block;
+  margin-right: 30px;
+  font-size: 12px;
+  color: #BFC5CA;
+  margin-block-start: unset;
+  margin-block-end: unset;
+}
+
+/* エラーメッセージ用のスタイル */
+.error {
+  color: red;
+}
+/* 成功メッセージ用のスタイル */
+.success {
+  color: green;
+}
+
+/* トップページ整理 */
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  width: 980px;
+}
+.item {
+  margin-bottom: 30px;
+  margin-right: 20px;
+  list-style: none;
+  width: 300px;
+  border: solid 1px black;
+}
+.item p {
+  margin-block-start: unset;
+  margin-block-end: unset;
+}
+.item_header {
+  display: flex;
+}
+.item_header img {
+  width: 300px;
+  height: 300px;
+}
+.item_body {
+  background-color: white;
+}
+
+/* お気に入りボタン */
+.like_button {
+  cursor: pointer;
+  color: white;/*アイコン色*/
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  font-size: 30px;
+  border-radius: 50%;
+  text-align: center;
+  overflow: hidden;
+  font-weight: bold;
+  background-image: linear-gradient(#F68B1E 0%, #F79428 100%);
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.66);
+}
+.like_button:active {
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), 0 2px 2px rgba(0, 0, 0, 0.19);
+  border-bottom: none;
+}
+
+.like {
+  display: inline;
+}
+.like_post {
+    background-color: gray;
+    border-top: solid 1px #e67c2e;
+    border-bottom: solid 1px #e67c2e;
+}
+.like_post .post_body_heading {
+    background-color: #dccaca;
+}
+.like_post .post_comments {
+    background-color: #e4d6c7;
+}
+.like_post .like_button {
+    color: yellow;
+}
+
+/*全体*/
+a {
+  text-decoration: none;
+}
+
+/*新規出品*/
+.create_block {
+  width: 600px;
+  background-color: white;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+.create_block h1 {
+  width: 560px;
+  padding: 10px 0px;
+  margin-right: auto;
+  margin-left: auto;
+  border-bottom: solid 1px #BDBDB7;
+}
+.create_description {
+  width: 400px;
+  text-align: left;
+  margin-right: auto;
+  margin-left: auto;
+}
+.create_block label {
+  display: inline-block;
+}
+.item_description {
+  display: block;
+  margin-bottom: 10px;
+}
+.item_image {
+  display: none;
+}
+.select_image {
+  cursor: pointer;
+}
+.create_button {
+  width: 400px;
+  color: white;
+  background-color: #0067C0;
+  border: #0067C0;
+  padding: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
