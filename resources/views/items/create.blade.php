@@ -40,7 +40,7 @@
                 <label class = "select_image" for = "image" role = "button"><img src = "/images/no_image.png" style = "object-fit: cover;"></label>
                 </span>
             </div>
-            <input class = "create_button" type="submit" value="出品">
+            <input class = "button" type="submit" value="出品">
         </form>
       </div>
     </div>

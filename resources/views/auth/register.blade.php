@@ -1,40 +1,26 @@
 @extends('layouts.not_logged_in')
  
 @section('content')
-  <h1>サインアップ</h1>
- 
-  <form method="POST" action="{{ route('register') }}">
-    @csrf
-    <div>
-      <label>
-        ユーザー名:
+  <div class = "top">
+    <h1>サインイン</h1>
+    <form method="POST" action="{{ route('register') }}">
+      @csrf
+      <div class = "top_input">
+        <label>ユーザー名</label>
         <input type="text" name="name">
-      </label>
-    </div>
- 
-    <div>
-      <label>
-        メールアドレス:
+        
+        <label>メールアドレス</label>
         <input type="email" name="email">
-      </label>
-    </div>
- 
-    <div>
-      <label>
-        パスワード:
+        
+        <label>パスワード</label>
         <input type="password" name="password">
-      </label>
-    </div>
- 
-    <div>
-      <label>
-        パスワード（確認用）:
+  
+        <label>パスワード（確認用）</label>
         <input type="password" name="password_confirmation" >
-      </label>
-    </div>
- 
-    <div>
-      <input type="submit" value="登録">
-    </div>
-  </form>
+   
+        <input class = "button" type="submit" value="登録">
+        <p>登録されている方は<a href="{{ route('login') }}">こちら</a></p>
+      </div>
+    </form>
+  </div>
 @endsection
