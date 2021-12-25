@@ -13,7 +13,7 @@
           </form>
         </li>
         <li>
-          <a href="{{route('items.create')}}">新規出品</a>
+          <a href="{{route('items.create')}}">新規出展</a>
         </li>
         <li><a href = "{{ route('users.show', \Auth::user()->id) }}">マイページ</a>
           <ul>
