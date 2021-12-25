@@ -2,7 +2,7 @@
  
 @section('content')
   <div class = "top">
-    <h1>サインアップ</h1>
+    <h1>サインイン</h1>
     <form method="POST" action="{{ route('register') }}">
       @csrf
       <div class = "top_input">
