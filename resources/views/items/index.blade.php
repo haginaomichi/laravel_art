@@ -8,7 +8,7 @@
           <li class="item">
             <div class="item_content">
               <div class="item_header">
-                <a href="{{ route('items.show', $item)}}"><img src="{{ asset('storage/' . $item->image) }}"></a>
+                <a href="{{ route('items.show', $item)}}"><img src="{{ asset('../storage/' . $item->image) }}"></a>
                 <!--<p>{{ $item->description }}</p>-->
               </div>
               <div class="item_body">
