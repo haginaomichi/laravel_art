@@ -10,11 +10,11 @@
         <form method="POST" action="{{ route('items.store') }}" enctype="multipart/form-data">
             @csrf
             <div>
-              <label>商品名</label>
+              <label>作品名</label>
               <input class = "item_description" type="text" name="name">
             </div>
             <div>
-              <label>商品説明</label>
+              <label>作品説明</label>
               <input class = "item_description" type="text" name="description">
             </div>
             <div>
