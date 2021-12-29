@@ -35,7 +35,7 @@ class ItemController extends Controller
             $items = Item::where('name', 'LIKE' , "%{$keyWord}%")->where('user_id', '!=', $user_id)->latest()->paginate(6);
         }
         return view('items.index', [
-          'title' => '商品一覧',
+          'title' => '作品一覧',
           'items' => $items,
         ]);
     }
@@ -49,7 +49,7 @@ class ItemController extends Controller
     {
         $categories = \DB::table('categories')->get();
         return view('items.create', [
-          'title' => '作品を出品',
+          'title' => '作品を出展',
           'categories' => $categories,
         ]);
     }
@@ -83,7 +83,7 @@ class ItemController extends Controller
           'category_id' => $request->category_id,
           'image' => $path,
         ]);
-        session()->flash('success', '商品を出品しました');
+        session()->flash('success', '作品を出展しました');
         return redirect()->route('users.exhibition', $user_id);
     }
 
@@ -98,7 +98,7 @@ class ItemController extends Controller
         $item = Item::find($id);
         $ordered_items = Order::where('item_id', '=', $id)->count();
         return view('items.show', [
-          'title' => '商品詳細',
+          'title' => '作品詳細',
           'item' => $item,
           'ordered_items' => $ordered_items,
         ]);
@@ -115,7 +115,7 @@ class ItemController extends Controller
         $item = Item::find($id);
         $categories = \DB::table('categories')->get();
         return view('items.edit', [
-          'title' => '商品情報の編集',
+          'title' => '作品情報の編集',
           'item' => $item,
           'categories' => $categories,
         ]);
@@ -132,7 +132,7 @@ class ItemController extends Controller
     {
         $item = Item::find($id);
         $item->update($request->only(['name', 'description', 'price', 'category_id']));
-        session()->flash('success', '商品情報を編集しました');
+        session()->flash('success', '作品情報を編集しました');
         return redirect()->route('items.show', $item);
     }
 
@@ -152,7 +152,7 @@ class ItemController extends Controller
         }
         
         $item->delete();
-        \Session::flash('success', '商品を削除しました');
+        \Session::flash('success', '作品を削除しました');
         return redirect()->route('items.index');
     }
     
@@ -162,7 +162,7 @@ class ItemController extends Controller
         $items = Item::where('user_id', '=', $user_id)->latest()->get();
         
         return view('users.exhibition', [
-            'title' => '出品商品一覧',
+            'title' => '出展作品一覧',
             'items' => $items,
             ]);
     }
@@ -172,7 +172,7 @@ class ItemController extends Controller
       {
         $item = Item::find($id);
         return view('items.edit_image', [
-          'title' => '商品画像の変更',
+          'title' => '作品画像の変更',
           'item' => $item,
         ]);
       }

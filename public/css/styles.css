@@ -153,7 +153,7 @@ a {
   margin-bottom: 10px;
 }
 
-/*新規出品*/
+/*新規出展*/
 .create_block {
   width: 600px;
   background-color: white;
@@ -195,5 +195,26 @@ a {
   padding: 5px;
   cursor: pointer;
   margin-bottom: 10px;
+}
+
+/*作品詳細*/
+.show_block {
+  width: 900px;
+  background-color: white;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+.show_body {
+  display: flex;
+  justify-content: center;
+  width:700px;
+  margin: 0 auto 30px auto;
+}
+.show_body ul {
+  text-align: left;
+}
+.show_body ul li {
+  list-style: none;
 }
 
