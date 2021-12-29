@@ -3,21 +3,23 @@
 @section('title', $title)
  
 @section('content')
-  <h2>商品名</h2>
-  {{ $item->name }}
-  <h2>画像</h2>
-  <img src="{{ \Storage::url($item->image) }}">
-  <h2>カテゴリー</h2>
-  {{ $item->category->name }}
-  <h2>価格</h2>
-  {{ $item->price }}円
-  <h2>説明</h2>
-  {{ $item->description }}
-  <div>
-    @if($ordered_items === 0)
-      <a href = "{{ route('items.confirm', $item) }}"><input type="submit" value="購入する"></a>
-    @else
-      <p>売り切れ</p>
-    @endif
+  <div class = "show_block">
+    <h2>{{ $item->name }}</h2>
+    <div class = "show_body">
+      <img src="{{ \Storage::url($item->image) }}">
+      <ul>
+        <li>出展者:{{ $item->user->name }}</li>
+        <li>カテゴリー:{{ $item->category->name }}</li>
+        <li>価格:{{ $item->price }}円</li>
+      </ul>
+    </div>
+      {{ $item->description }}
+    <div>
+      @if($ordered_items === 0)
+        <a href = "{{ route('items.confirm', $item) }}"><input class = "button" type="submit" value="購入する"></a>
+      @else
+        <p>売り切れ</p>
+      @endif
+    </div>
   </div>
 @endsection
