@@ -49,7 +49,7 @@ class ItemController extends Controller
     {
         $categories = \DB::table('categories')->get();
         return view('items.create', [
-          'title' => '商品を出品',
+          'title' => '作品を出品',
           'categories' => $categories,
         ]);
     }
