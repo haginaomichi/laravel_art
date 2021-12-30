@@ -16,8 +16,10 @@ body {
   list-style: none;
   background-color: white;
   border-bottom: solid 3px #BDBDB7;
-  padding-left: 0;
-  padding: 30px 0px;
+  /*padding-left: 0;*/
+  padding: 10px 0px;
+  margin-block-start: unset;
+  margin-block-end: unset;
 }
 .header_nav li {
   margin-right: 30px;
@@ -232,3 +234,18 @@ a {
   list-style: none;
 }
 
+/*カルーセル*/
+.carousel {
+  width: 1000px;
+  height: 300px;
+  margin: 0 auto;
+}
+/* 画像に合わせてカルーセルの高さを調整 */
+.slick-slide {
+  height: auto;
+}
+/* 背景の色に合わせて前後の矢印の色を調整 */
+.slick-prev:before,
+.slick-next:before {
+  color: #000;
+}
