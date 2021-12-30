@@ -4,7 +4,7 @@
 <header>
     <ul class="header_nav">
         <li>
-          <a href="{{ route('items.index') }}">トップページ</a>
+          <a href="{{ route('items.index') }}"><img src = "/images/title_icon.png"></a>
         </li>
         <li>
           <form method = "get" action = "{{route('items.index')}}">
