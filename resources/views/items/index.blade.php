@@ -3,6 +3,12 @@
 @section('title', $title)
  
 @section('content')
+  <div class="carousel"> <!-- このセレクタを JavaScript で指定する -->
+    <div><img src="image01.jpg" alt="画像1"></div>
+    <div><img src="image02.jpg" alt="画像2"></div>
+    <div><img src="image03.jpg" alt="画像3"></div>
+    <div><img src="image04.jpg" alt="画像4"></div>
+  </div>
   <ul class="items">
       @forelse($items as $item)
           <li class="item">
@@ -28,11 +34,18 @@
       @endforelse
   </ul>
   {{ $items->links() }}
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
   <script>
     /* global $ */
     $('.like_button').on('click', (event) => {
         $(event.currentTarget).next().submit();
     })
+    // カルーセル
+    $('.carousel').slick({
+            // ここに slick のオプションを指定
+            dots: true,
+            autoplay: true,
+            autoplaySpeed: 3000,
+        });
   </script>
 @endsection
