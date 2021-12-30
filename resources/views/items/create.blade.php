@@ -37,7 +37,7 @@
                 <!--</label>-->
                 <span>
                 <input class = "item_image" type="file" name="image" id = "image">
-                <label class = "select_image" for = "image" role = "button"><img src = "/images/no_image.png" style = "object-fit: cover;"></label>
+                <label class = "select_image" for = "image" role = "button"><img src = "{{ asset("storage/no_image.png") }}" style = "object-fit: cover;"></label>
                 </span>
             </div>
             <input class = "button" type="submit" value="出品">
