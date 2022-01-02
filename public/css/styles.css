@@ -20,17 +20,67 @@ body {
   padding: 10px 0px;
   margin-block-start: unset;
   margin-block-end: unset;
+  /*position: fixed;*/
 }
 .header_nav li {
   margin-right: 30px;
   list-style: none;
 }
-.header_nav li ul{
-    display: none;
-    padding: 0px;
+/*.header_nav li ul{*/
+/*    display: none;*/
+/*    padding: 0px;*/
+/*}*/
+/*.header_nav li:hover ul{*/
+/*    display: block;*/
+/*}*/
+
+.ham {
+	position: relative;
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+	background-color: black;
 }
-.header_nav li:hover ul{
-    display: block;
+.ham_line {
+	position: absolute;
+	left: 10px;
+	width: 20px;
+	height: 1px;
+	background-color: white;
+	transition: all 0.3s;
+}
+.ham_line1 {
+	top: 10px;
+}
+.ham_line2 {
+	top: 18px;
+}
+.ham_line3 {
+	top: 26px;
+}
+.clicked .ham_line1 {
+	transform: rotate(45deg);
+	top: 20px;
+}
+.clicked .ham_line2 {
+	width: 0px;
+}
+.clicked .ham_line3 {
+	transform: rotate(-45deg);
+	top: 20px;
+}
+.menu_wrapper {
+  margin-top: 50px;
+}
+.menu {
+  text-align: center;
+  position: fixed;
+	width: 300px;
+	height: 150px;
+	transition: all 1s;
+}
+.clicked .menu {
+	left: 310px;
 }
 
 /*フッターメニュー整理*/
@@ -236,7 +286,7 @@ a {
 
 /*カルーセル*/
 .carousel {
-  width: 1000px;
+  width: 100%;
   height: 300px;
   margin: 0 auto;
 }
@@ -249,3 +299,9 @@ a {
 .slick-next:before {
   color: #000;
 }
+.slick-dots {
+  margin: 0 auto 30px 0;
+}
+/*.slick-dotted.slick-slider {*/
+/*  margin-top: 70px;*/
+/*}*/
