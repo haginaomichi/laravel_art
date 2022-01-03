@@ -18,6 +18,11 @@
                 <!--<p>{{ $item->description }}</p>-->
               </div>
               <div class="item_body">
+                @if( $item->isOrderedBy() === false)
+                  <p class = "on_sale">出展中</p>
+                @else
+                  <p class = "sold_out">売切れ</p>
+                @endif
                 <p>作品名：{{ $item->name }} {{ $item->price }}円</p>
                 <!--<p>カテゴリ：{{ $item->category->name }} [{{ $item->created_at }}]</p>-->
                 <a class="like_button">{{ $item->isLikedBy(Auth::user()) ? '★' : '☆' }}</a>
@@ -25,7 +30,7 @@
                   @csrf
                   @method('patch')
                 </form>
-                <p>{{ $item->isOrderedBy() ? '売り切れ' : '出展中' }}</p>
+                <!--<p>{{ $item->isOrderedBy() ? '売り切れ' : '出展中' }}</p>-->
               </div>
             </div>
           </li>

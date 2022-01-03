@@ -18,7 +18,7 @@
       @if($ordered_items === 0)
         <a href = "{{ route('items.confirm', $item) }}"><input class = "button" type="submit" value="購入する"></a>
       @else
-        <p>売り切れ</p>
+        <p>売切れ</p>
       @endif
     </div>
   </div>
