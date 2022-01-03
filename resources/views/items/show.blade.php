@@ -3,9 +3,9 @@
 @section('title', $title)
  
 @section('content')
-  <div class = "show_block">
+  <div class = "description_block">
     <h2>{{ $item->name }}</h2>
-    <div class = "show_body">
+    <div class = "description_body">
       <img src="{{ \Storage::url($item->image) }}">
       <ul>
         <li>出展者:{{ $item->user->name }}</li>

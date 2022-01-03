@@ -28,7 +28,7 @@ class ItemController extends Controller
     public function index(Request $request)
     {
         $user_id = \Auth::user()->id;
-        $items = Item::where('user_id', '!=', $user_id)->latest()->paginate(6);
+        $items = Item::where('user_id', '!=', $user_id)->latest()->paginate(8);
         
         $keyWord = $request->input('keyWord', '');
         if($keyWord != '') {
