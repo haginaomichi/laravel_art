@@ -3,7 +3,7 @@
 @section('title', $title)
  
 @section('content')
-  <div class = "container">
+  <!--<div class = "container">-->
     <div class = "create_block">
       <h1>{{ $title }}</h1>
       <div class = "create_description">
@@ -44,5 +44,5 @@
         </form>
       </div>
     </div>
-  </div>
+  <!--</div>-->
 @endsection

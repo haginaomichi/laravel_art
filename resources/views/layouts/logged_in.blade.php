@@ -2,7 +2,7 @@
  
 @section('header')
 <header class = "header_nav">
-    <ul class="header_nav_left">
+    <ul>
         <li>
           <a href="{{ route('items.index') }}"><img src = "{{ asset("images/title_icon.png") }}"></a>
         </li>
@@ -15,13 +15,13 @@
             <input type = "submit" value = "検索">
           </form>
         </li>
-        <li class="ham" id="ham">
+        <li class="hamburger" id="hamburger">
         	<span class="ham_line ham_line1"></span>
         	<span class="ham_line ham_line2"></span>
         	<span class="ham_line ham_line3"></span>
         </li>
-        <li class = "menu_wrapper" id="menu_wrapper">
-          <div class = "menu">
+        <li>
+          <nav class = "globalMenuSp">
             <ul>
               <li><a href = "{{ route('users.show', \Auth::user()->id) }}">マイページ</a></li>
               <li><a href="{{ route('likes.index') }}">お気に入りリスト</a></li>
@@ -34,9 +34,10 @@
                 </form>
               </li>
             </ul>
-          </div>
+          </nav>
         </li>
     </ul>
+    
     <!--<p>{{ Auth::user()->name }}さん、こんにちは！</p>-->
 </header>
 @endsection
@@ -49,11 +50,22 @@
 </ul>
 
 <script>
-  const ham = document.getElementById('ham');
-  const menu_wrapper = document.getElementById('menu_wrapper');
-  ham.addEventListener('click', function() {
-  	ham.classList.toggle('clicked');
-  	menu_wrapper.classList.toggle('clicked');
-  });
+  // const ham = document.getElementById('ham');
+  // const menu_wrapper = document.getElementById('menu_wrapper');
+  // ham.addEventListener('click', function() {
+  // 	ham.classList.toggle('clicked');
+  // 	menu_wrapper.classList.toggle('clicked');
+  // });
+  $(function() {
+    $('.hamburger').click(function() {
+        $(this).toggleClass('active');
+ 
+        if ($(this).hasClass('active')) {
+            $('.globalMenuSp').addClass('active');
+        } else {
+            $('.globalMenuSp').removeClass('active');
+        }
+    });
+});
 </script>
 @endsection
