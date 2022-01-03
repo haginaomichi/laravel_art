@@ -4,7 +4,7 @@
 <header class = "header_nav">
     <ul class="header_nav_left">
         <li>
-          <a href="{{ route('items.index') }}"><img src = "{{ asset("storage/title_icon.png") }}"></a>
+          <a href="{{ route('items.index') }}"><img src = "{{ asset("images/title_icon.png") }}"></a>
         </li>
     </ul>
     
