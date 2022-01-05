@@ -21,6 +21,9 @@ body {
   margin-block-end: unset;
   z-index: 1;
 }
+.header_nav img {
+  align-items: center;
+}
 .header_nav_right {
   display: flex;
   align-items: center;
@@ -181,11 +184,23 @@ nav.globalMenuSp.active {
   display: flex;
 }
 .item_header img {
-  width: 200px;
+  width: 198px;
   height: 200px;
 }
 .item_body {
   background-color: white;
+}
+.item_body_bottom {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  padding-inline-start: unset;
+}
+.item_body_bottom li:first-child{
+  /*margin-right: auto;*/
+}
+.item_body_bottom li:last-child{
+  margin-left: auto;
 }
 .on_sale {
   color: white;
@@ -197,7 +212,7 @@ nav.globalMenuSp.active {
 }
 .sold_out {
   color: white;
-  background-color: #F75D59;
+  background-color: #D4D1D0;
   width: 60px;
   text-align: center;
   border-radius: 0.5em;
@@ -207,20 +222,23 @@ nav.globalMenuSp.active {
 /* お気に入りボタン */
 .like_button {
   cursor: pointer;
-  color: white;/*アイコン色*/
-  width: 80px;
-  height: 80px;
-  line-height: 80px;
-  font-size: 30px;
+  color: yellow;/*アイコン色*/
+  /*width: 80px;*/
+  height: 30px;
+  /*line-height: 80px;*/
+  font-size: 18px;
   border-radius: 50%;
+  border-color: #0669D2;
+  border-style: unset;
   text-align: center;
   overflow: hidden;
   font-weight: bold;
-  background-image: linear-gradient(#F68B1E 0%, #F79428 100%);
-  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.66);
+  /*background-image: linear-gradient(#F68B1E 0%, #F79428 100%);*/
+  background-color: #71ADEC;
+  /*text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.66);*/
 }
 .like_button:active {
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), 0 2px 2px rgba(0, 0, 0, 0.19);
+  /*box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), 0 2px 2px rgba(0, 0, 0, 0.19);*/
   border-bottom: none;
 }
 
@@ -341,13 +359,30 @@ a {
   display: flex;
   justify-content: center;
   width: 700px;
-  margin: 0 auto;
+  margin: 20px auto 0 auto;
 }
 .profile_description ul {
   text-align: left;
 }
 .profile_description ul li {
   list-style: none;
+}
+.profile_description img {
+  margin-right: 10px;
+  width: 100px;
+  height: 100px;
+}
+.profile_change {
+  list-style: none;
+  text-align: center;
+}
+.profile_change li {
+  display: inline;
+}
+.purchase_history {
+  list-style: none;
+  text-align: left;
+  padding-inline-start: 100px;
 }
 
 /*作品詳細*/
@@ -394,4 +429,31 @@ a {
 /*}*/
 .pagination {
   justify-content: center;
+}
+
+
+h1 {
+  text-align: center;
+}
+dl {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid #ccc;
+	border-bottom: none;
+}
+dt {
+  width: 20%;
+  /*border: solid 1px black;*/
+  text-align: center;
+  vertical-align: middle;
+  border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+dd {
+  width: 80%;
+  /*border: solid 1px black;*/
+  text-align: left;
+  vertical-align: middle;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 0px;
 }

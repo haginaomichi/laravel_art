@@ -19,7 +19,7 @@
               @endif
               <p>作品名：{{ $item->name }} {{ $item->price }}円</p>
               <!--<p>カテゴリ：{{ $item->category->name }} [{{ $item->created_at }}]</p>-->
-              <a class="like_button">{{ $item->isLikedBy(Auth::user()) ? '★' : '☆' }}</a>
+              <button class="like_button">{{ $item->isLikedBy(Auth::user()) ? '★' : '☆' }}</button>
               <form method="post" class="like" action="{{ route('items.toggle_like', $item) }}">
                 @csrf
                 @method('patch')

@@ -11,25 +11,31 @@
       @else
           <img src="{{ asset('images/no_image.png') }}">
       @endif
-      <ul>
-        <li>名前：{{ $user->name }}さん</li>
-        <li>コメント：
+      <dl>
+        <dt>名前</dt>
+        <dd>{{ $user->name }}さん</dd>
+        <dt>コメント</dt>
+        <dd>
           @if($user->profile === '')
             <p>プロフィールが設定されていません。</p>
           @else
             {{ $user->profile }}
           @endif
-        </li>
-        <li>出展数：{{ $item_count }}</li>
-      </ul>
+        </dd>
+        <dt>出展数</dt>
+        <dd>{{ $item_count }}</dd>
+      </dl>
     </div>
-    <p class = "image_change"><a href = "{{ route('profile.edit_image', \Auth::user()) }}">画像を変更</a></p>
-    <p><a href = "{{ route('profile.edit', \Auth::user()) }}">プロフィール編集</a></p>
+    <ul class = "profile_change">
+      <li>[<a href = "{{ route('profile.edit_image', \Auth::user()) }}">画像を変更</a>]</li>
+      <li>[<a href = "{{ route('profile.edit', \Auth::user()) }}">プロフィール編集</a>]</li>
+    </ul>
     
-    <h2>購入履歴</h2>
-    @forelse($user->orders as $order)
-      <p><a href = "{{ route('items.show', $order->item) }}">{{ $order->item->name }}</a> {{ $order->item->price }}円 出展者：{{ $order->item->user->name }}さん</p>
-    @empty
-      <p>購入履歴はありません。</p>
-    @endforelse
+    <ul class = "purchase_history">【購入履歴】
+      @forelse($user->orders as $order)
+        <li><a href = "{{ route('items.show', $order->item) }}">{{ $order->item->name }}</a> {{ $order->item->price }}円 出展者：{{ $order->item->user->name }}さん</li>
+      @empty
+        <li>購入履歴はありません。</li>
+      @endforelse
+    </ul>
 @endsection
