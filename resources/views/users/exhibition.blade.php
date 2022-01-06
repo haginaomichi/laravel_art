@@ -37,4 +37,5 @@
           <li>出品している商品はありません。</li>
       @endforelse
   </ul>
+  {{ $items->links() }}
 @endsection

@@ -32,7 +32,7 @@ class ItemController extends Controller
         
         $keyWord = $request->input('keyWord', '');
         if($keyWord != '') {
-            $items = Item::where('name', 'LIKE' , "%{$keyWord}%")->where('user_id', '!=', $user_id)->latest()->paginate(6);
+            $items = Item::where('name', 'LIKE' , "%{$keyWord}%")->where('user_id', '!=', $user_id)->latest()->paginate(8);
         }
         return view('items.index', [
           'title' => '作品一覧',
@@ -159,7 +159,7 @@ class ItemController extends Controller
     // 出品商品一覧
     public function exhibition($id){
         $user_id = \Auth::user()->id;
-        $items = Item::where('user_id', '=', $user_id)->latest()->get();
+        $items = Item::where('user_id', '=', $user_id)->latest()->paginate(8);
         
         return view('users.exhibition', [
             'title' => '出展作品一覧',

@@ -31,14 +31,14 @@
               </select>
             </div>
             <div>
-                <!--<label>-->
-                <!--  画像を選択:-->
-                <!--  <input type="file" name="image">-->
-                <!--</label>-->
-                <span>
-                <input class = "item_image" type="file" name="image" id = "image">
-                <label class = "select_image" for = "image" role = "button"><img src = "{{ asset('storage/no_image.png') }}" style = "object-fit: cover;"></label>
-                </span>
+                <label>
+                  画像を選択:
+                  <input type="file" name="image">
+                </label>
+                <!--<span>-->
+                <!--<input class = "item_image" type="file" name="image" id = "image">-->
+                <!--<label class = "select_image" for = "image" role = "button"><img src = "{{ asset('storage/no_image.png') }}" style = "object-fit: cover;"></label>-->
+                <!--</span>-->
             </div>
             <input class = "button" type="submit" value="出品">
         </form>
