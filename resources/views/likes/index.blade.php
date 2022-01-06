@@ -17,14 +17,17 @@
               @else
                 <p class = "sold_out">売切れ</p>
               @endif
-              <p>作品名：{{ $item->name }} {{ $item->price }}円</p>
-              <!--<p>カテゴリ：{{ $item->category->name }} [{{ $item->created_at }}]</p>-->
-              <button class="like_button">{{ $item->isLikedBy(Auth::user()) ? '★' : '☆' }}</button>
-              <form method="post" class="like" action="{{ route('items.toggle_like', $item) }}">
-                @csrf
-                @method('patch')
-              </form>
-              <!--<p>{{ $item->isOrderedBy() ? '売り切れ' : '出品中' }}</p>-->
+              <p>作品名：{{ $item->name }}</p>
+              <ul class = "item_body_bottom">
+                <li>{{ $item->price }}円</li>
+                <li>
+                  <button class="like_button">{{ $item->isLikedBy(Auth::user()) ? '★' : '☆' }}</button>
+                  <form method="post" class="like" action="{{ route('items.toggle_like', $item) }}">
+                    @csrf
+                    @method('patch')
+                  </form>
+                </li>
+              </ul>
             </div>
           </div>
         </li>

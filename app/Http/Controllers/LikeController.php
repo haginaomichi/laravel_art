@@ -3,6 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Item;
+use App\User;
+use App\Like;
+use App\Order;
+use App\Category;
+use App\Http\Requests\ItemRequest;
+use App\Http\Requests\ItemImageRequest;
+use App\Http\Requests\ItemShowRequest;
+use App\Services\FileUploadService;
+use InterventionImage;
 
 class LikeController extends Controller
 {

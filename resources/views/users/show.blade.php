@@ -9,7 +9,7 @@
       @if($user->image !== '')
           <img src="{{ asset('storage/' . $user->image) }}">
       @else
-          <img src="{{ asset('images/no_image.png') }}">
+          <img src="{{ asset('storage/no_character.png') }}">
       @endif
       <dl>
         <dt>名前</dt>

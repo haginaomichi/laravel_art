@@ -222,7 +222,7 @@ nav.globalMenuSp.active {
 /* お気に入りボタン */
 .like_button {
   cursor: pointer;
-  color: yellow;/*アイコン色*/
+  color: yellow;
   /*width: 80px;*/
   height: 30px;
   /*line-height: 80px;*/
@@ -279,6 +279,7 @@ a {
   font-size: 50px;
   margin-block-start: unset;
   margin-block-end: unset;
+  border-bottom: none;
 }
 .top h2 {
   width: 560px;
@@ -385,6 +386,20 @@ a {
   padding-inline-start: 100px;
 }
 
+/*マイページ編集*/
+.edit_block {
+  width: 400px;
+  text-align: left;
+  margin-right: auto;
+  margin-left: auto;
+}
+.edit_block img {
+  display: block;
+  margin: 0 auto 10px auto;
+  width: 100px;
+  height: 100px;
+}
+
 /*作品詳細*/
 .description_block {
   width: 900px;
@@ -396,7 +411,7 @@ a {
 .description_body {
   display: flex;
   justify-content: center;
-  width:700px;
+  width: 850px;
   margin: 0 auto 30px auto;
 }
 .description_body ul {
@@ -404,6 +419,20 @@ a {
 }
 .description_body ul li {
   list-style: none;
+}
+.description_body img {
+  margin-right: 10px;
+  width: 250px;
+  height: 250px;
+}
+.show_sold_out {
+  width: 400px;
+  color: white;
+  background-color: #D4D1D0;
+  border: #0067C0;
+  border-radius: 0.5em;
+  padding: 5px;
+  margin: 0 auto 10px auto;
 }
 
 /*カルーセル*/
@@ -434,6 +463,12 @@ a {
 
 h1 {
   text-align: center;
+  width: 560px;
+  padding: 10px 0px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 10px;
+  border-bottom: solid 1px #BDBDB7;
 }
 dl {
   display: flex;
