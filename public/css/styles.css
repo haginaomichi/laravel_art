@@ -437,6 +437,10 @@ a {
   width: 250px;
   height: 250px;
 }
+.description_info {
+  height: 150px;
+}
+
 .show_sold_out {
   width: 400px;
   color: white;
@@ -489,7 +493,7 @@ dl {
 	border-bottom: none;
 }
 dt {
-  width: 20%;
+  width: 30%;
   /*border: solid 1px black;*/
   text-align: center;
   vertical-align: middle;
@@ -497,7 +501,7 @@ dt {
 	border-bottom: 1px solid #ccc;
 }
 dd {
-  width: 80%;
+  width: 70%;
   /*border: solid 1px black;*/
   text-align: left;
   vertical-align: middle;

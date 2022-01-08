@@ -7,11 +7,19 @@
     <h2>{{ $item->name }}</h2>
     <div class = "description_body">
       <img src="{{ \Storage::url($item->image) }}">
-      <ul>
-        <li>出展者:{{ $item->user->name }}</li>
-        <li>カテゴリー:{{ $item->category->name }}</li>
-        <li>価格:{{ $item->price }}円</li>
-      </ul>
+      <dl class = "description_info">
+        <dt>出展者</dt>
+        <dd>{{ $item->user->name }}</dd>
+        <dt>カテゴリー</dt>
+        <dd>{{ $item->category->name }}</dd>
+        <dt>価格</dt>
+        <dd>{{ $item->price }}円</dd>
+      </dl>
+      <!--<ul>-->
+      <!--  <li>出展者:{{ $item->user->name }}</li>-->
+      <!--  <li>カテゴリー:{{ $item->category->name }}</li>-->
+      <!--  <li>価格:{{ $item->price }}円</li>-->
+      <!--</ul>-->
     </div>
       {{ $item->description }}
     <div>
