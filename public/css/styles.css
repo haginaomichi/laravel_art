@@ -19,7 +19,7 @@ body {
   border-bottom: solid 3px #BDBDB7;
   margin-block-start: unset;
   margin-block-end: unset;
-  /*margin-top: 5px;*/
+  margin-bottom: 10px;
   /*z-index: 1;*/
 }
 /*.header_nav img {*/
@@ -248,7 +248,7 @@ nav.globalMenuSp.active {
 }
 .be_like {
   color: black;
-  background-color: gray;
+  background-color: #D4D1D0;
 }
 .like_button:active {
   border-bottom: none;
@@ -453,9 +453,13 @@ a {
 
 /*カルーセル*/
 .carousel {
-  width: 80%;
-  height: 300px;
+  width: 85%;
+  height: 450px;
   margin: 0 auto;
+}
+.carousel img {
+  width: 944px;
+  height: 410px;
 }
 /* 画像に合わせてカルーセルの高さを調整 */
 .slick-slide {
