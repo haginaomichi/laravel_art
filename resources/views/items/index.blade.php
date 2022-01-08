@@ -25,21 +25,25 @@
                 @endif
                 <p>作品名：{{ $item->name }}</p>
                 <ul class = "item_body_bottom">
-                  <li>{{ $item->price }}円</li>
-                  <li>
-                    <button class="like_button">{{ $item->isLikedBy(Auth::user()) ? '★' : '☆' }}</button>
-                    <form method="post" class="like" action="{{ route('items.toggle_like', $item) }}">
-                      @csrf
-                      @method('patch')
-                    </form>
-                  </li>
+                  <li>￥{{ $item->price }}</li>
+                  @if ( $item->isLikedBy(Auth::user()) === true)
+                    <li>
+                      <button class = "like_button be_not_like">★</button>
+                      <form method="post" class="like" action="{{ route('items.toggle_like', $item) }}">
+                        @csrf
+                        @method('patch')
+                      </form>
+                    </li>
+                  @else
+                    <li>
+                      <button class = "like_button be_like">☆</button>
+                      <form method="post" class="like" action="{{ route('items.toggle_like', $item) }}">
+                        @csrf
+                        @method('patch')
+                      </form>
+                    </li>
+                  @endif
                 </ul>
-                <!--<button class="like_button">{{ $item->isLikedBy(Auth::user()) ? '★' : '☆' }}</button>-->
-                <!--<form method="post" class="like" action="{{ route('items.toggle_like', $item) }}">-->
-                <!--  @csrf-->
-                <!--  @method('patch')-->
-                <!--</form>-->
-                <!--<p>{{ $item->isOrderedBy() ? '売り切れ' : '出展中' }}</p>-->
               </div>
             </div>
           </li>

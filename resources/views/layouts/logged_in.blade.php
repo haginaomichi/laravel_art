@@ -2,7 +2,7 @@
  
 @section('header')
 <header class = "header_nav">
-    <ul>
+    <ul class = "header_nav_left">
         <li>
           <a href="{{ route('items.index') }}"><img src = "{{ asset('storage/title_icon.png') }}"></a>
         </li>
@@ -40,15 +40,6 @@
     
     <!--<p>{{ Auth::user()->name }}さん、こんにちは！</p>-->
 </header>
-@endsection
-@section('footer')
-<ul class = "footer_nav">
-  <li>プライバシーポリシー</li>
-  <li>特定商取引に基づく表示</li>
-  <li>利用規約</li>
-  <li>サイトマップ</li>
-</ul>
-
 <script>
   // const ham = document.getElementById('ham');
   // const menu_wrapper = document.getElementById('menu_wrapper');
