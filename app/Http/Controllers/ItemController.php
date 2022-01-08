@@ -234,7 +234,7 @@ class ItemController extends Controller
           ]);
       
       return view('items.finish', [
-        'title' => 'ご購入ありがとうございました。',
+        'title' => 'ご購入ありがとうございます。',
         'item' => $item,
         ]);
     }
