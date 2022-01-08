@@ -33,7 +33,7 @@
     
     <ul class = "purchase_history">【購入履歴】
       @forelse($user->orders as $order)
-        <li><a href = "{{ route('items.show', $order->item) }}">{{ $order->item->name }}</a> {{ $order->item->price }}円 出展者：{{ $order->item->user->name }}さん</li>
+        <li><a href = "{{ route('items.show', $order->item) }}">{{ $order->item->name }}</a> ￥{{ $order->item->price }} 出展者：{{ $order->item->user->name }}さん</li>
       @empty
         <li>購入履歴はありません。</li>
       @endforelse

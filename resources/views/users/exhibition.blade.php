@@ -18,7 +18,7 @@
                 @else
                   <p class = "sold_out">売切れ</p>
                 @endif
-                <p>商品名：{{ $item->name }} {{ $item->price }}円</p>
+                <p>商品名：{{ $item->name }} ￥{{ $item->price }}</p>
                 <p>カテゴリ：{{ $item->category->name }}</p>
                  <p>{{ $item->description }}</p>
                 <p>[{{ $item->created_at }}]</p>
