@@ -4,10 +4,10 @@
  
 @section('content')
   <div class="carousel"> <!-- このセレクタを JavaScript で指定する -->
-    <div><img src="image01.jpg" alt="画像1"></div>
-    <div><img src="image02.jpg" alt="画像2"></div>
-    <div><img src="image03.jpg" alt="画像3"></div>
-    <div><img src="image04.jpg" alt="画像4"></div>
+    <div><img src= "{{ asset('storage/gallery1.png') }}"></div>
+    <div><img src= "{{ asset('storage/gallery2.png') }}"></div>
+    <div><img src= "{{ asset('storage/gallery3.png') }}"></div>
+    <div><img src= "{{ asset('storage/gallery4.png') }}"></div>
   </div>
   <ul class="items">
       @forelse($items as $item)
