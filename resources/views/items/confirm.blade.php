@@ -15,11 +15,6 @@
         <dt>価格</dt>
         <dd>{{ $item->price }}円</dd>
       </dl>
-      <!--<ul>-->
-      <!--  <li>出展者:{{ $item->user->name }}</li>-->
-      <!--  <li>カテゴリー:{{ $item->category->name }}</li>-->
-      <!--  <li>価格:{{ $item->price }}円</li>-->
-      <!--</ul>-->
     </div>
       {{ $item->description }}
     <div>

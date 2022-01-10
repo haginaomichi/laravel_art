@@ -3,7 +3,7 @@
 @section('title', $title)
  
 @section('content')
-  <div class="carousel"> <!-- このセレクタを JavaScript で指定する -->
+  <div class="carousel">
     <div><img src= "{{ asset('storage/gallery1.png') }}"></div>
     <div><img src= "{{ asset('storage/gallery2.png') }}"></div>
     <div><img src= "{{ asset('storage/gallery3.png') }}"></div>
@@ -15,7 +15,6 @@
             <div class="item_content">
               <div class="item_header">
                 <a href="{{ route('items.show', $item)}}"><img src="{{ asset('storage/' . $item->image) }}"></a>
-                <!--<p>{{ $item->description }}</p>-->
               </div>
               <div class="item_body">
                 @if( $item->isOrderedBy() === false)

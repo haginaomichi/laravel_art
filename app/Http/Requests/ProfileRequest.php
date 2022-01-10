@@ -26,7 +26,6 @@ class ProfileRequest extends FormRequest
         return [
             'name' => ['required'],
             'profile' => ['required', 'max:255'],
-            // 'email' => ['required', Rule::unique('users')->ignore($this->user())],
         ];
     }
 }
