@@ -19,5 +19,4 @@
         </form>
         <p>[<a href = "{{ route('users.show', \Auth::user()) }}">戻る</a>]</p>
     </div>
-    
 @endsection

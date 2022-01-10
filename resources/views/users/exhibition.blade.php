@@ -10,7 +10,6 @@
             <div class="item_content">
               <div class="item_header">
                 <a href="{{ route('items.show', $item->id)}}"><img src="{{ asset('storage/' . $item->image) }}"></a>
-                <!--<p>{{ $item->description }}</p>-->
               </div>
               <div class="item_body">
                 @if( $item->isOrderedBy() === false)
@@ -22,7 +21,6 @@
                 <p>カテゴリ：{{ $item->category->name }}</p>
                  <p>{{ $item->description }}</p>
                 <p>[{{ $item->created_at }}]</p>
-                <!--<p>{{ $item->isOrderedBy() ? '売り切れ' : '出品中' }}</p>-->
                 [<a href="{{ route('items.edit', $item) }}">編集</a>]
                 [<a href="{{ route('items.edit_image', $item) }}">画像を変更</a>]
                 <form class="delete" method="post" action="{{ route('items.destroy', $item) }}">

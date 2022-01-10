@@ -67,11 +67,7 @@ class ItemController extends Controller
         //画像投稿処理
         $path = '';
         $image = $request->file('image');
-        // $image_to = '';
         if( isset($image) === true ){
-            // $image_name = $image->getClientOriginalName();
-            // $image_to = InterventionImage::make($image)->fit(300, 300)->save();
-            // publicディスク(storage/app/public/)のphotosディレクトリに保存
             $path = $image->store('photos', 'public');
         }
         

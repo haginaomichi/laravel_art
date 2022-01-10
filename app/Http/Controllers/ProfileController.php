@@ -37,13 +37,6 @@ class ProfileController extends Controller
     public function updateImage(ProfileImageRequest $request, FileUploadService $service){
         //画像投稿処理
         $path = $service->saveImage($request->file('image'));
-        // $path = '';
-        // $image = $request->file('image');
- 
-        // if( isset($image) === true ){
-        //     // publicディスク(storage/app/public/)のphotosディレクトリに保存
-        //     $path = $image->store('photos', 'public');
-        // }
  
         $user = \Auth::user();
  
