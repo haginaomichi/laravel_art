@@ -16,7 +16,7 @@
         <dd>{{ $item->price }}円</dd>
       </dl>
     </div>
-      {{ $item->description }}
+    <p class = "description_comment">{!! nl2br(e( $item->description)) !!}</p>
     <div>
       @if($ordered_items === 0)
         <a href = "{{ route('items.confirm', $item) }}"><input class = "button" type="submit" value="購入する"></a>

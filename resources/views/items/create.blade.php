@@ -14,7 +14,7 @@
           </div>
           <div>
             <label>作品説明</label>
-            <input class = "item_description" type="text" name="description">
+            <textarea name = "description" cols = 50 rows = 5 ></textarea>
           </div>
           <div>
             <label>価格</label>
@@ -25,7 +25,7 @@
             <select class = "item_description" name="category_id">
               <option hidden>選択してください</option>
               @foreach($categories as $category)
-                  <option value = "{{ $category->id }}">{{ $category->name }}</option>
+                <option value = "{{ $category->id }}">{{ $category->name }}</option>
               @endforeach
             </select>
           </div>
