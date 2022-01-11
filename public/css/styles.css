@@ -1,9 +1,51 @@
+/*全体*/
 .container {
   margin-left: auto;
   margin-right: auto;
 }
+.error {
+  color: red;
+}
+.success {
+  color: green;
+}
+body {
+  margin: 0px;
+}
+a {
+  text-decoration: none;
+}
+h1 {
+  text-align: center;
+  width: 560px;
+  padding: 10px 0px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 10px;
+  border-bottom: solid 1px #BDBDB7;
+}
+dl {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid #ccc;
+	border-bottom: none;
+}
+dt {
+  width: 30%;
+  text-align: center;
+  vertical-align: middle;
+  border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+dd {
+  width: 70%;
+  text-align: left;
+  vertical-align: middle;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 0px;
+}
 
-/* ヘッダーメニュー整理 */
+/*ヘッダーメニュー*/
 .header_nav {
   display: flex;
   align-items: center;
@@ -32,7 +74,7 @@
   list-style: none;
 }
 
-/*　ハンバーガーボタン　*/
+/*メニューボタン*/
 .hamburger {
   display : block;
   position: relative;
@@ -63,7 +105,7 @@
   top: 30px;
 }
 
-/* ナビ開いてる時のボタン */
+/*メニューボタン（開いている時）*/
 .hamburger.active span:nth-child(1) {
   top : 16px;
   left: 6px;
@@ -71,7 +113,6 @@
   -moz-transform   : rotate(-45deg);
   transform        : rotate(-45deg);
 }
-
 .hamburger.active span:nth-child(2),
 .hamburger.active span:nth-child(3) {
   top: 16px;
@@ -79,7 +120,6 @@
   -moz-transform   : rotate(45deg);
   transform        : rotate(45deg);
 }
-
 .globalMenuSp {
   position: absolute;
   z-index : 2;
@@ -92,14 +132,12 @@
   transition: all 0.6s;
   width: 20%;
 }
-
 .globalMenuSp ul {
   background: #ccc;
   margin: 0 auto;
   padding: 0;
   width: 100%;
 }
-
 .globalMenuSp ul li {
   list-style-type: none;
   padding: 0;
@@ -121,29 +159,18 @@
   text-decoration :none;
 }
 .globalMenuSp input {
-    background-color: #ccc;
-    padding: 16px 118px;
-    border-style: none;
+  background-color: #ccc;
+  padding: 16px 118px;
+  border-style: none;
 }
 .globalMenuSp input:hover{
   background :#ddd;
 }
-
-/* このクラスを、jQueryで付与・削除する */
 .globalMenuSp.active {
   transform: translateY(0%);
 }
 
-/* エラーメッセージ用のスタイル */
-.error {
-  color: red;
-}
-/* 成功メッセージ用のスタイル */
-.success {
-  color: green;
-}
-
-/* トップページ整理 */
+/*トップページ整理*/
 .items {
   display: flex;
   flex-wrap: wrap;
@@ -198,7 +225,7 @@
   font-weight: bold;
 }
 
-/* お気に入りボタン */
+/*お気に入りボタン*/
 .like_button {
   cursor: pointer;
   height: 30px;
@@ -220,29 +247,6 @@
 }
 .like_button:active {
   border-bottom: none;
-}
-
-.like {
-  display: inline;
-}
-.like_post {
-    background-color: gray;
-    border-top: solid 1px #e67c2e;
-    border-bottom: solid 1px #e67c2e;
-}
-.like_post .post_body_heading {
-    background-color: #dccaca;
-}
-.like_post .post_comments {
-    background-color: #e4d6c7;
-}
-.like_post .like_button {
-    color: yellow;
-}
-
-/*全体*/
-a {
-  text-decoration: none;
 }
 
 /*ログイン画面*/
@@ -350,8 +354,8 @@ a {
 }
 .profile_description img {
   margin-right: 10px;
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
 }
 .profile_change {
   list-style: none;
@@ -376,13 +380,17 @@ a {
 .edit_block img {
   display: block;
   margin: 0 auto 10px auto;
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
+}
+.edit_name {
+  display: block;
+  margin-bottom: 10px;
 }
 
 /*作品詳細*/
 .description_block {
-  width: 900px;
+  width: 700px;
   background-color: white;
   text-align: center;
   margin-right: auto;
@@ -391,7 +399,7 @@ a {
 .description_body {
   display: flex;
   justify-content: center;
-  width: 850px;
+  width: 600px;
   margin: 0 auto 30px auto;
 }
 .description_body ul {
@@ -408,7 +416,9 @@ a {
 .description_info {
   height: 150px;
 }
-
+.description_comment {
+  text-align: left;
+}
 .show_sold_out {
   width: 400px;
   color: white;
@@ -429,11 +439,9 @@ a {
   width: 944px;
   height: 410px;
 }
-/* 画像に合わせてカルーセルの高さを調整 */
 .slick-slide {
   height: auto;
 }
-/* 背景の色に合わせて前後の矢印の色を調整 */
 .slick-prev:before,
 .slick-next:before {
   color: #000;
@@ -443,39 +451,4 @@ a {
 }
 .pagination {
   justify-content: center;
-}
-
-body {
-  margin: 0px;
-}
-h1 {
-  text-align: center;
-  width: 560px;
-  padding: 10px 0px;
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 10px;
-  border-bottom: solid 1px #BDBDB7;
-}
-dl {
-  display: flex;
-  flex-wrap: wrap;
-  border: 1px solid #ccc;
-	border-bottom: none;
-}
-dt {
-  width: 30%;
-  /*border: solid 1px black;*/
-  text-align: center;
-  vertical-align: middle;
-  border-right: 1px solid #ccc;
-	border-bottom: 1px solid #ccc;
-}
-dd {
-  width: 70%;
-  /*border: solid 1px black;*/
-  text-align: left;
-  vertical-align: middle;
-  border-bottom: 1px solid #ccc;
-  margin-bottom: 0px;
 }

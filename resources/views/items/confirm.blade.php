@@ -16,7 +16,7 @@
         <dd>{{ $item->price }}円</dd>
       </dl>
     </div>
-      {{ $item->description }}
+    <p class = "description_comment">{!! nl2br(e( $item->description)) !!}</p>
     <div>
       <form method="post" class="order" action="{{ route('items.finish', $item) }}">
         @csrf

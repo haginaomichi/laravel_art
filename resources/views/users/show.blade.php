@@ -19,7 +19,7 @@
           @if($user->profile === '')
             <p>プロフィールが設定されていません。</p>
           @else
-            {{ $user->profile }}
+            {!! nl2br(e($user->profile)) !!}
           @endif
         </dd>
         <dt>出展数</dt>

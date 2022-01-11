@@ -17,7 +17,7 @@
         <dd>{{ $item->price }}円</dd>
       </dl>
     </div>
-      {{ $item->description }}
+       <p class = "description_comment">{!! nl2br(e( $item->description)) !!}</p>
     <div>
       <a href = "{{ route('top') }}">トップに戻る</a>
     </div>
