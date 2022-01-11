@@ -11,12 +11,12 @@
   </div>
   <ul class="items">
     @forelse($items as $item)
-      <li class="item">
-        <div class="item_content">
-          <div class="item_header">
-            <a href="{{ route('items.show', $item)}}"><img src="{{ asset('storage/' . $item->image) }}"></a>
+      <li class = "item">
+        <div class = "item_content">
+          <div class = "item_header">
+            <a href = "{{ route('items.show', $item)}}"><img src = "{{ asset('storage/' . $item->image) }}"></a>
           </div>
-          <div class="item_body">
+          <div class = "item_body">
             @if( $item->isOrderedBy() === false)
               <p class = "on_sale">出展中</p>
             @else
@@ -28,7 +28,7 @@
               @if ( $item->isLikedBy(Auth::user()) === true)
                 <li>
                   <button class = "like_button be_not_like">★</button>
-                  <form method="post" class="like" action="{{ route('items.toggle_like', $item) }}">
+                  <form method = "post" class = "like" action="{{ route('items.toggle_like', $item) }}">
                     @csrf
                     @method('patch')
                   </form>
